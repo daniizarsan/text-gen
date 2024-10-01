@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String generator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon-32x32.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Password & UUID Generator</h1>
+
+        <!-- Display de la contraseña generada (campo editable) -->
+        <div id="passwordDisplay" class="password-box">
+            <input type="text" id="generatedPassword" class="password-output" value="Click generate to get a password">
+            <button id="copyBtn" class="copy-btn">Copy</button>
+        </div>
+
+        <!-- Configuración para personalizar la generación -->
+        <div class="settings">
+            <label for="passwordLength" class="label">Password Length</label>
+            <div class="length-container">
+                <input type="range" id="passwordLength" min="4" max="64" value="24" class="slider">
+                <input type="number" id="lengthInput" min="4" max="64" value="24" class="length-input">
+            </div>
+
+            <div class="options">
+                <label><input type="checkbox" id="includeUppercase" checked> Include Uppercase</label>
+                <label><input type="checkbox" id="includeLowercase" checked> Include Lowercase</label>
+                <label><input type="checkbox" id="includeNumbers" checked> Include Numbers</label>
+                <label><input type="checkbox" id="includeSymbols"> Include Symbols</label>
+            </div>
+
+            <!-- Botones alineados -->
+            <div class="button-group">
+                <button id="generateUUIDBtn" class="uuid-btn">Generate UUID</button>
+                <button id="generateBtn" class="generate-btn">Generate Password</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
